@@ -1,0 +1,12 @@
+<div class="panel panel-default">
+  <div class="panel-heading">{{ element.name }}</div>
+  <div class="panel-body">
+    <p>
+      <strong *ngIf="element.type === 'server'" style="color: red">{{
+        element.content
+      }}</strong>
+      <em *ngIf="element.type === 'blueprint'">{{ element.content }}</em>
+    </p>
+    <!-- <ng-content></ng-content> // allows content to be projected on screen that is in between the opening and closing tag of <app-server-element>: by default, nothing shows up in between the opening and closing tags in app -->
+  </div>
+</div>
